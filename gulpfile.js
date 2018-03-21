@@ -146,7 +146,8 @@ Gulp.task('watch', () => {
     .on('change', message)
     .on('change', BrowserSync.reload);
   Gulp.watch(['docs/assets/scss/**/*.scss'], ['docs:css'])
-    .on('change', message);
+    .on('change', message)
+    .on('change', BrowserSync.reload);
 });
 
 Gulp.task('docs', (resolve) => {
